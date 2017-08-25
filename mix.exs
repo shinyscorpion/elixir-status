@@ -4,7 +4,8 @@ defmodule Status.Mixfile do
   def project do
     [
       app: :status,
-      version: "0.0.1",
+      version: "0.0.1-pre1",
+      description: "Application status reports",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
@@ -16,7 +17,7 @@ defmodule Status.Mixfile do
       homepage_url: "https://github.com/shinyscorpion/elixir-status",
       docs: [
         main: "readme",
-        extras: ["README.md", "LICENSE"],
+        extras: ["README.md"],
       ],
     ]
   end
@@ -43,6 +44,8 @@ defmodule Status.Mixfile do
 
   defp deps do
     [
+      {:poison, "~> 3.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 end
