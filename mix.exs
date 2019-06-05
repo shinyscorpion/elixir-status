@@ -4,9 +4,10 @@ defmodule Status.Mixfile do
   def project do
     [
       app: :status,
-      version: "0.0.1",
-      elixir: "~> 1.5",
-      start_permanent: Mix.env == :prod,
+      version: "0.1.0",
+      description: "Application status reports",
+      elixir: "~> 1.8",
+      start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
 
@@ -16,8 +17,8 @@ defmodule Status.Mixfile do
       homepage_url: "https://github.com/shinyscorpion/elixir-status",
       docs: [
         main: "readme",
-        extras: ["README.md", "LICENSE"],
-      ],
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -27,11 +28,16 @@ defmodule Status.Mixfile do
       maintainers: ["Ian Luites"],
       licenses: ["MIT"],
       files: [
-        "lib/status", "lib/status.ex", "mix.exs", "README*", "LICENSE*", # Elixir
+        # Elixir
+        "lib/status",
+        "lib/status.ex",
+        "mix.exs",
+        "README*",
+        "LICENSE*"
       ],
       links: %{
-        "GitHub" => "https://github.com/shinyscorpion/elixir-status",
-      },
+        "GitHub" => "https://github.com/shinyscorpion/elixir-status"
+      }
     ]
   end
 
@@ -43,6 +49,8 @@ defmodule Status.Mixfile do
 
   defp deps do
     [
+      {:jason, "~> 1.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
