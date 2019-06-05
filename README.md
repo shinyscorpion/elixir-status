@@ -10,7 +10,7 @@ to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:status, "~> 0.0"}
+    {:status, "~> 0.1"}
   ]
 end
 ```
