@@ -5,10 +5,10 @@ defmodule Status.Time do
     {utime, _} = :erlang.statistics(:wall_clock)
 
     deploy =
-      :milli_seconds
+      :millisecond
       |> :os.system_time()
       |> Kernel.-(utime)
-      |> DateTime.from_unix!(:milli_seconds)
+      |> DateTime.from_unix!(:millisecond)
 
     %{
       deploy: deploy,
