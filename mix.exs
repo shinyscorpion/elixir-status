@@ -4,7 +4,7 @@ defmodule Status.Mixfile do
   def project do
     [
       app: :status,
-      version: "0.1.0",
+      version: "0.1.1",
       description: "Application status reports",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
